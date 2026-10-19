@@ -1,0 +1,38 @@
+{
+  "name": "proton-mcp",
+  "version": "0.1.0",
+  "description": "A local, read-only MCP server for Proton Mail (through Proton Mail Bridge) and Proton Drive (through the folder the desktop app syncs).",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "proton-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "imapflow": "^2.5.6",
+    "mailparser": "^3.9.46",
+    "unpdf": "^1.9.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/mailparser": "^3.9.0",
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
