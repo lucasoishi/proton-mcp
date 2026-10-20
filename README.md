@@ -86,7 +86,11 @@ npm run dev -- --drive-dir <folder>
 
 Layout: `src/mail/` (source interface + Bridge IMAP), `src/drive/store.ts`, `src/extract.ts` (PDF/text/HTML to text), `src/server.ts` (tools), `src/index.ts` (CLI).
 
-The mail side is tested against a fake, **not yet against a real Bridge**.
+The automated tests run the mail side against a fake IMAP source and the Drive side against a temporary folder. I have also run the server by hand against my own Proton Bridge and Proton Drive folder; that manual check is not part of the test suite.
+
+## Built with AI assistance
+
+Most of the code, tests and documentation in this repository were written by an AI assistant (Claude Code, by Anthropic), working from my requirements and constraints: read-only access, local-only connections, and no way for the agent to change or send anything. I directed the design and ran and checked it against my own account. It is a small personal project tested on one person's mailbox, so treat it as unreviewed software: read the code before pointing it at mail you care about.
 
 ## License
 
